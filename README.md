@@ -28,7 +28,7 @@ nvcr.io/nvidia/driver               470.57.02-ubuntu20.04             15eeb055da
 ```
 
 # 2. Client
-<Before Setting up>
+- Before Setting up
 ```
 $ sudo cat /etc/docker/daemon.json
 {
@@ -45,7 +45,7 @@ The push refers to repository [192.168.33.1:5000/face_recognizer]
 Get https://192.168.33.1:5000/v2/: http: server gave HTTP response to HTTPS client
 ```
 
-<After Setting up>
+- After Setting up
 ```
 $ sudo cat /etc/docker/daemon.json
 {
