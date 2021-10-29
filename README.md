@@ -1,5 +1,6 @@
 # private_dockerRegistry
 
+# 1. Registry server
 ```
 $ sudo docker pull registry:2.7.1
 $ sudo docker run --rm --name registry -d -p 5000:5000 -v /mnt/registry:/var/lib/registry registry:2.7.1
@@ -17,7 +18,6 @@ $ curl http://localhost:5000/v2/_catalog
 $ curl http://localhost:5000/v2/ubuntu/tags/list
 {"name":"ubuntu","tags":["20.04"]}
 ```
-
 ```
 $ sudo docker images
 REPOSITORY                          TAG                               IMAGE ID       CREATED        SIZE
@@ -27,6 +27,8 @@ nvidia/cuda                         11.4.1-cudnn8-devel-ubuntu20.04   03c5d80db7
 nvcr.io/nvidia/driver               470.57.02-ubuntu20.04             15eeb055da6a   2 months ago   826MB
 ```
 
+# 2. Client
+<Before Setting up>
 ```
 $ sudo cat /etc/docker/daemon.json
 {
@@ -42,6 +44,8 @@ $ sudo docker push 192.168.33.1:5000/face_recognizer:1.0.1
 The push refers to repository [192.168.33.1:5000/face_recognizer]
 Get https://192.168.33.1:5000/v2/: http: server gave HTTP response to HTTPS client
 ```
+
+<After Setting up>
 ```
 $ sudo cat /etc/docker/daemon.json
 {
