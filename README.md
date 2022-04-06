@@ -89,3 +89,7 @@ $ curl 192.168.33.1:5000/v2/face_recognizer/tags/list
 {"name":"face_recognizer","tags":["1.0.1"]}
 
 ```
+
+# 3. How to Delete images in repo
+See below: <br>
+https://gist.github.com/takenoco82/b9559a1abd57eb0845a77041860cd26e
